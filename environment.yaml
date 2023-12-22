@@ -1,0 +1,9 @@
+name: soundslike
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.8.5
+  - pip>=20.2
+  - pip:
+    - -r requirements.txt
