@@ -86,11 +86,11 @@ api_key = get_api_key()
 df, longest_sound_duration = get_df(api_key)
 
 with st.form('get_query_sound'):
-    st.text('Please record or upload a sound file to find similar sounds')
+    st.text('Please upload a sound file to find similar sounds')
 
     query_sound = st.file_uploader('Upload your sound here', type=['wav','mp3'])
 
-    num_sounds = st.selectbox("Choose number of songs to return",
+    num_sounds = st.selectbox("Choose number of sounds to return",
                               options=list(range(1,11)), index=2)
 
     min_duration, max_duration = st.slider('Return sounds between these lengths (in seconds):',
